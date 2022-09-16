@@ -24,7 +24,7 @@ Um exemplo seria, posso chamar uma variável de $mynme ou my_name (mas nunca usa
 
 
 
-# ABORDANDO MELHOR AS STRINGS 
+# Abordando melhor as strings 
 
 Com strings, é possível somar objetos, como 1+2 ou a+b. Criando novas strings como 3 ou ab. Chama-se concatenation, onde ele
 vai concatenar (juntar) duas strings em uma só. É possível fazer isso com o exemplo básico de alert("hello" + " world");
@@ -78,7 +78,7 @@ No caso, especificamos que até 140 caracteres, ele vai recortar. Todo o resto d
 
 
 
-# METODO toUpperCase() 
+# Método toUpperCase() 
 
 toUpperCase() altera todos os caracteres da sua string para maiúsculas. Então, como nos anteriores, tal como .slice ou .length,
 basta usar uma variável, exemplo, name.toUpperCase(); para transformar cada caractere na string em sua versão maiúscula. 
@@ -123,7 +123,7 @@ alert("Hello Mr. " + fullNameUpper);
 
 
 
-# AGORA ENTRANDO MELHOR EM NÚMEROS (NUMBERS) 
+# Entrando melhor em números (numbers) 
 
 É possível criar variáveis (var) com números dentro e executar equações. Como, var a = 1+2; ou var b = 5-3; ou var c = 5*2 ou 
 var d = 4/2. Além disso, temos o modulo, que te da o restante da divisão, exemplo: var f = 9 % 6 que daria 3. Ou seja, é o que
@@ -165,7 +165,7 @@ Logo, o resultado da 8.
 
 
 
-# ENTRANDO EM FUNÇÕES (FUNCTIONS) 
+# Entrando em funções (functions) 
 
 Funções ajudam a empacotar parte do código para que ele seja executado mais de uma vez. É basicamente da mesma forma que funcio
 na outros elementos. Você tem uma palavra-chave (fuction), você dá a função um nome getMilk() {inserir os valores que você quer
@@ -299,7 +299,7 @@ Dessa forma, bastava a gente adicionar um return dentro da função principal ba
 
 
 
-# RNG IN JAVASCRIPT 
+# RNG em JavaScript
 
 Começamos a entrar agora em RNG no JS. O primeiro exemplo, foi um rolador de dado de 1 a 6 de forma aleatório:
 
@@ -348,7 +348,7 @@ Usando prompt para aparecer na tela dois locais para inserir o nome e o Math.ran
 
 
 
-# IF AND ELSE FUNCTIONS (CONDITIONALS) 
+# If and else (conditionals) 
 
 No caso, o "if", é uma função em que testamos uma condição e isso é seguido imediatamente pelo bloco de código que será execu
 tado, caso essa condição seja verdadeira. Então abrimos outra instrução, que é o "else", para especificar o que acontecer se essa
@@ -427,7 +427,7 @@ isLeapYear(2100);
 
 
 
-# ARRAYS JS 
+# Array JavaScript 
 
 Uma ARRAY te permite colocar vários dados, ao invés de um como no "var();" padrão. Para colocarmos e indicarmos que estamos
 tratando de uma array, basta colocar "var n = [];". 
@@ -497,7 +497,7 @@ dentro do array. COnseguimos criar o jogo com os "if" testando se o número for,
  
 
 
-# LOOPS
+# Loops (while e for)
 
 while loops, executa em modo loop (sem parar) um linha de código que seja uma verdade. Quando deixar de ser verdadeiro, ele 
 para e pula para a próxima linha de código. O problema com while(){} é que se você esqueceu ou cometeu um erro, como esquecer
@@ -544,9 +544,7 @@ console.log(output);
 fizbuzz();
 ```
 
-Também temos o FOR (loop), sendo a palavra-chave "for", seguido de (). for(i=0; i<2; i++) {}. Sendo que o "i=0;" é o começo, o pon
-to de partida do loop. O próximo, "i<2;" é o final do loop. E o final do loop, o "i++", é qual a mudança estamos fazendo, para 
-qual direção estamos indo.
+Também temos o FOR (loop), sendo a palavra-chave "for", seguido de (). for(i=0; i<2; i++) {}. Sendo que o "i=0;" é o começo, o ponto de partida do loop. O próximo, "i<2;" é o final do loop. E o final do loop, o "i++", é qual a mudança estamos fazendo, para qual direção estamos indo.
 
 ```
 for (var numberOfBottles = 99; numberOfBottles>=0; numberOfBottles--) {
