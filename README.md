@@ -1,6 +1,6 @@
-=======
+
 # Intro
-=======
+
 Quando começarmos a digitar algum código em js, a primeira palavra (que é uma palavra chave) geralmente é uma função, seguida
 de uma mensagem dentro e um final (;). Exemplo, alert("hello world");. Neste caso, o alert é a função, ("hello world") é a menssagem e ";" é o que finaliza o nosso código.
 
@@ -23,9 +23,9 @@ Um exemplo seria, posso chamar uma variável de $mynme ou my_name (mas nunca usa
 
 
 
-=============================
+
 # ABORDANDO MELHOR AS STRINGS 
-=============================
+
 Com strings, é possível somar objetos, como 1+2 ou a+b. Criando novas strings como 3 ou ab. Chama-se concatenation, onde ele
 vai concatenar (juntar) duas strings em uma só. É possível fazer isso com o exemplo básico de alert("hello" + " world");
 
@@ -42,53 +42,65 @@ alert("You have written " + tweetCount + ". Now you have only " + (140 - tweetCo
 
 A próxima função se chama .Slice (fatiar). Primeiro, tem que lembrar que programas começam contando a partir do zero. Para cortar um letra dentro do nome "Breno", seria necessário usar:
 
+```
 var name = "Breno";
 name.slice(0,1);
+```
 
 Dessa forma, o slice cortaria apenas o "B" do nome, já que você está especificando que é o 0 e o 1 é, continue até mas não inclua, no caso, do "r" para frente.
 
 Caso fosse:
 
+```
 var name = "Breno";
 name.slice(0,3);
+```
 
 Ele iria cortar o "BRE" e deixar o "NO". Pois, iria começar do 0 (B) até o 3 (N), mas sem incluir ele. Uma forma bem interessante de entender, é pegar o número da direita e diminuir do dá esquerda. Exemplo:
 
+```
 var name = "Breno";
 name.slice(1,3);
+```
 
 3 - 1 = 2. logo, pegaria "RE" apenas para cortar.
 
 Um exemplo para colocar o máximo de caracteres para ser usar em uma caixa de texto, é assim:
 
+```
 var tweet = prompt("Tell me more: ");
 var tweetSlice = tweet.slice(0,140);
 alert(tweetSlice);
+```
 
 No caso, especificamos que até 140 caracteres, ele vai recortar. Todo o resto depois dos 140 caracteres, vão ser excluídos.
 
 
 
-=====================
+
 # METODO toUpperCase() 
-=====================
+
 toUpperCase() altera todos os caracteres da sua string para maiúsculas. Então, como nos anteriores, tal como .slice ou .length,
 basta usar uma variável, exemplo, name.toUpperCase(); para transformar cada caractere na string em sua versão maiúscula. 
 
 Existe, também a versão contrária, com toLowerCase(); que coloca eles em minusculo. Um exemplo, seria:
 
+```
 var name = "Breno"
 name = name.toUpperCase(); (para colocar em maisculo)
 name = name.toLowerCase(); (para colocar em minusculo)
+```
 
 Outro bom exemplo, é criar um prompt onde a pessoa precisa entrar com o nome dela. Mas se ela entrar como nome de forma minuscula, o código vai ajustar a primeira letra do nome para maiúscula e emitir um alerta de boas vindas. Ficaria assim:
 
+```
 var name = prompt("What it is your name?");
 var nameChar = name.slice(0,1);
 var nameUpperCase = nameChar.toUpperCase();
 var restOfName = name.slice(1,name.length);
 var fullNameUpper = nameUpperCase + restOfName;
 alert("Hello Mr. " + fullNameUpper);
+```
 
 Acabou que temos várias variáveis (var). Primeiro para criar o prompt, sendo para isolar a letra que começa o nome da pessoa, depois precisa colocar ela maiúscula com .toUpperCase(); e depois isolar o resto do nome com o .slice. Aqui tem um truque interessante, podemos usar name.length para que qualquer que seja o comprimento do nome, sempre pegue da segunda letra do nome em diante.
 
@@ -99,6 +111,7 @@ Faltou só adicionar uma coisa, que é o restOfName para .toLowerCase(); caso al
 
 Logo ficaria assim:
 
+```
 var name = prompt("What it is your name?");
 var nameChar = name.slice(0,1);
 var nameUpperCase = nameChar.toUpperCase();
@@ -106,46 +119,54 @@ var restOfName = name.slice(1,name.length);
 var restOfNameLowerCase = restOfName.toLowerCase();
 var fullNameUpper = nameUpperCase + restOfNameLowerCase;
 alert("Hello Mr. " + fullNameUpper);
+```
 
 
 
-============================================
 # AGORA ENTRANDO MELHOR EM NÚMEROS (NUMBERS) 
-============================================
+
 É possível criar variáveis (var) com números dentro e executar equações. Como, var a = 1+2; ou var b = 5-3; ou var c = 5*2 ou 
 var d = 4/2. Além disso, temos o modulo, que te da o restante da divisão, exemplo: var f = 9 % 6 que daria 3. Ou seja, é o que
 sobra da divisão.
 
 Tem uma coisa que acontece só na programação. Por exemplo, uma var x = 5;, pode ser modificada com x = x + 1;. Ou seja, agora o 5 seria somado com mais 1, que daria 6. Mas isso pode ser escrito de outra forma:
 
+```
 var x = 5; 
 x++; 
+```
 
 O x++; é a mesma coisa que falar x = x + 1;. Também dária 6 no resultado final. Isso é chamado de expressão de incremento 
 (increment). Também temos o contrário (decremento ou decrement):
 
+```
 var x = 5;
 x--;
+```
 
 que é equivalente a falar x = x - 1;. Resultando em 4 (5-1). Mas lembrar que sempre estamos aumentando ou diminuindo apenas um
 valor. Agora, se quisermos aumentar mais de 1 valor, podemos usar:
 
+```
 var x = 5;
 x += 2;
+```
 
 Dessa forma, é a mesma coisa de dizer x = x + 2;. Resultando em 7 (5+2). Isso também funciona com divisão /= ou multiplicação com *= ou subtração -=. Podemos usar com outras var também, tipo:
 
+```
 var x = 5;
 var y = 3;
 x += y;
+```
 
 Logo, o resultado da 8.
 
 
 
-=================================
+
 # ENTRANDO EM FUNÇÕES (FUNCTIONS) 
-=================================
+
 Funções ajudam a empacotar parte do código para que ele seja executado mais de uma vez. É basicamente da mesma forma que funcio
 na outros elementos. Você tem uma palavra-chave (fuction), você dá a função um nome getMilk() {inserir os valores que você quer
 que seja executado dentro das chaves}. 
@@ -159,6 +180,7 @@ Mas no caso dos logs, apenas aparecem para o console e para o desenvolvedor. Mui
 
 Ainda sobre funções, é possível colocar um valor especifico dentro do function getMilk(bottles) {};. Para quando ele for executando as linhas de códigos e chegar em uma que tenha "bottles", saber quantas garrafas tem que comprar (isso é um exemplo). Podemos, colocar número dentro também. Por exemplo:
 
+```
 function getMilk(bottles) {
     var cost = bottles * 1.5;
 
@@ -197,10 +219,13 @@ function getMilk(money) {
 
 getMilk(5);
 
+```
+
 Dessa forma, é possível especificar quanto de dinheiro nós vamos dar ao robô, em ordem dele ter que calcular pelo custo da garrafa de leite, quanto ele pode comprar de fato. Usando Math.floor(), nos conseguimos estabelecer um arredondamento para quanto ele tem que comprar de caixa de leite.
 
 Para saber quantos dias, semanas e meses lhe faltam até completar 90 anos, podemos fazer dessa forma:
 
+```
 function lifeInWeeks(age) {   
 
 var years = 90 - age;
@@ -260,6 +285,7 @@ function calcChange(startingMoney, costPerBottle) {
 }
 
 console.log("hey master, here is your $" + getMilk(5) + " change.");
+```
 
 Criamos duas funções a mais. Uma calcBottles(startingMoney, costPerBottle); para calcular o dinheiro inicial que iriamos usar e o custo por caixa. Dessa forma, descobririamos quantas caixas conseguiriamos comprar. Depois, usamos o calcChange() da mesma forma.
 
@@ -270,16 +296,18 @@ Dessa forma, bastava a gente adicionar um return dentro da função principal ba
 
 
 
-===================
+
 # RNG IN JAVASCRIPT 
-===================
+
 Começamos a entrar agora em RNG no JS. O primeiro exemplo, foi um rolador de dado de 1 a 6 de forma aleatório:
 
+```
 var n = Math.random();
 n = n * 6;
 n = Math.floor(n) + 1;
 
 console.log(n);
+```
 
 Onde, o Math.random(); é uma função que retorna um número aleatório de 0 até 0.99 (nunca 1), com 16 casa decimais. Só que podemos adaptar, como foi o caso. Onde queriamos um dado de 6 lados, por isso n = n * 6; e depois usamos n = Math.floor(n) para arrendondar e deixar ele inteiro. 
 
@@ -287,6 +315,7 @@ Só que, só fazer isso, vai jogar o intervalo para 0-5.999999. Ainda precisamos
 
 Tem um exemplo bem bacana, que é love mates RNG:
 
+```
 function calcLove() {
 var yourName = prompt("What's your name? ");
 var yourLove = prompt("The name of your true love: ");
@@ -299,24 +328,26 @@ alert(n + "% chance that " + yourName + " and " + yourLove + " will live togethe
 }
 
 calcLove();
+```
 
 Usei uma função para praticar, mas ele poderia muito mais simples. Como essa:
 
+```
 prompt("What's your name?");
 prompt("What is their name?");
 
 var loveScore = Math.random() * 100;
 loveScore = Math.floor(loveScore) + 1;
 alert("Your love score is " + loveScore + "%");
-
+```
 
 Usando prompt para aparecer na tela dois locais para inserir o nome e o Math.random() * 100; para gerar números aleatórios até 99. Só que como queriamos até 100, primeiro arredondamos com Math.floor(loveScore) e depois adicionamos "+ 1;". Por fim, basta usar um alert para aparecer na tela qual foi o seu score.
 
 
 
-=======================================
+
 # IF AND ELSE FUNCTIONS (CONDITIONALS) 
-=======================================
+
 No caso, o "if", é uma função em que testamos uma condição e isso é seguido imediatamente pelo bloco de código que será execu
 tado, caso essa condição seja verdadeira. Então abrimos outra instrução, que é o "else", para especificar o que acontecer se essa
 condição não for verdadeira. Por meio destes testes de condições, nós conseguimos controlar o fluxo do código.
@@ -329,6 +360,7 @@ Também temos, outros comparativos, como o && (AND), || (OR) e o ! para (NOT).
 
 Uma forma de usar o "if" e "else", é no exemplo da calculadora do amor:
 
+```
 prompt("What's your name?");
 prompt("What is their name?");
 
@@ -340,11 +372,13 @@ alert("Your love score is " + loveScore + "%" + " and you both love each other l
 } else { alert("Your love score is " + loveScore + "%");
     
 }
+```
 
 O que muda, é que se caso (if), o score der acima de 70%, a mensagem vai personalizada. Caso não (else), executa a mensagem normal.
 
 Também temos, outros comparativos, como o && (AND), || (OR) e o ! para (NOT). No mesmo exemplo da calculadora:
 
+```
 prompt("What's your name?");
 prompt("What is their name?");
 
@@ -386,17 +420,19 @@ function isLeapYear(year) {
 }
 
 isLeapYear(2100);
+```
 
 
 
-============
+
 # ARRAYS JS 
-============
+
 Uma ARRAY te permite colocar vários dados, ao invés de um como no "var();" padrão. Para colocarmos e indicarmos que estamos
 tratando de uma array, basta colocar "var n = [];". 
 
 Um exemplo, usando o array.includes (que mostra quem inclui dentro do array), é o de uma lista de convidados:
 
+```
 var guestName = prompt("Hello, tell me your name: ");
 
 var myGuestList = ["Breno", "Felix", "Sodré", "Yan", "Leo", "João", "Cirilo"];
@@ -406,11 +442,11 @@ if (myGuestList.includes(guestName)) {
 } else {
     alert("Sorry, you are not invited.");
 }
+```
 
 Primeiro, colocamos uma variável com um prompt para perguntar qual o nome do convidado. Depois, outra variável com os nomes dos
 convidados dentro de uma array "[];" e por fim, colocamos os comparativos. Se (if), o seu nome estiver incluído na lista feita
 (myGuestList.includes(guestName)), então ele retornara um aviso "Welcome Mate!". Caso não (else), vai retornar um aviso "You are not invited.".
-
 
 É possível adicionar dados dentro do array com "push". Basta colocar a palavra-chave do array, por exemplo, temos uma variável
 chamada var output = []; e para colocarmos dados dentro dessa array, basta colocar output.push(); que ele vai colocar o dado
@@ -418,6 +454,7 @@ no final da matriz (sempre no final, nunca no inicio ou de forma aleatória).
 
 Temos o .pop também, que retira o último dado adicionado na array. Um exemplo de como usar o .push:
 
+```
 var output = [];
 var count = 1; 
 
@@ -448,6 +485,7 @@ count++;
 }
 
 fizbuzz();
+```
 
 Nesse jogo de fizbuzz, todos os números perfeitamente divisiveis por 3 e 5 são substituidos por "fizz" ou "buzz", respectivamente.
 
@@ -456,18 +494,18 @@ dentro do array. COnseguimos criar o jogo com os "if" testando se o número for,
 
  
 
-========
+
 # LOOPS
-========
+
 while loops, executa em modo loop (sem parar) um linha de código que seja uma verdade. Quando deixar de ser verdadeiro, ele 
 para e pula para a próxima linha de código. O problema com while(){} é que se você esqueceu ou cometeu um erro, como esquecer
 de aumentar uma variável e você pode acabar com um loop infinito que vai "crashar" o seu código.
 
 Um exemplo de while, pode ser aplicado no jogo fizbuzz:
 
+```
 var output = [];
 var count = 1; 
-
 
 
 function fizbuzz() {
@@ -502,13 +540,13 @@ console.log(output);
 }
 
 fizbuzz();
-
+```
 
 Também temos o FOR (loop), sendo a palavra-chave "for", seguido de (). for(i=0; i<2; i++) {}. Sendo que o "i=0;" é o começo, o pon
 to de partida do loop. O próximo, "i<2;" é o final do loop. E o final do loop, o "i++", é qual a mudança estamos fazendo, para 
 qual direção estamos indo.
 
-
+```
 for (var numberOfBottles = 99; numberOfBottles>=0; numberOfBottles--) {
     
     var bottleWord = "bottles";
@@ -523,26 +561,28 @@ for (var numberOfBottles = 99; numberOfBottles>=0; numberOfBottles--) {
     console.log(numberOfBottles + " " + bottleWord + " of beer on the wall.");
  
 }
-
+```
 
 Diferente do while, no for loop, nos pegamos as variações e o ponto de start e end e colocamos dentro do for. O interessante do
 while, é que ele busca por algo estatico. Como, enquanto um jogar estiver vivo, não acabe o jogo. É quando ele estar em um certo estado e vai depender disso. O for loop é quando você quer rodar o código muitas e muitas vezes e você vai definir um começo e um fim.
 
 
 
-===========================
+
 # Orientação a Objeto (POO) 
-===========================
+
 Em linguagens orientadas a objeto como c#, c++ ou java, é muito comum ter POO. O JS acabou implementando também este conceito, e você pode usar tanto classes (uma categoria de objetos) e os constructors para instaciar objetos. No JS, qualquer função pode ser usada para instanciar um objeto por meio do operador new.
 
 Um exemplo:
 
+```
 function retangulo(altura, largura) {
   this.altura = altura;
   this.largura = largura;
 }
 
 var r1 = new retangulo(4, 7);
+```
 
 Isso vai me retornar um objeto com o nome retangulo(altura: 4, largura: 7). Isso acontece, pq o this é uma referência especial que sempre se refere ao próprio objeto que está sendo construído. Como o JS podemos adicionar propriedades dinamicamentes a um obejto, eu adicionei usando o this, uma propriedade altura e uma propriedade largura. Atribuindo os valores que eu recebi como parametro do meu constructor. 
 
@@ -550,22 +590,29 @@ Com isso, a gente tem uma instância de um objeto. Se eu fizer de forma literal,
 
 Basta testar assim:
 
+```
 var r2 = {altura: 4, largura: 7};
+```
 
 e digitar r2 no console, vai me retornar apenas {altura: 4, largura: 7} como um objeto.
 
 É possível também usar instanceof para saber se um determinado objeto foi instanciado com um constructor. Dessa forma:
 
+```
 r1 instanceof retangulo
+```
 
 vai retornar true.
 
+```
 r2 instanceof retangulo
+```
 
 vai retornar false.
 
 Dá para criar uma função também, da mesma forma que eu criei propriedades com valores. Assim:
 
+```
 function retangulo(altura, largura) {
   this.altura = altura;
   this.largura = largura;
@@ -575,6 +622,7 @@ function retangulo(altura, largura) {
 function calcularArea() {
   return this.altura * this.largura;
 }
+```
 
 Se o meu r1 = new retangulo(4, 7) estava retornando um objeto com altura de 4 e largura de 7. Quando eu usar, r1.area(), ele vai me retornar 
 28, que é a multiplicação entre 4 e 7. Lembrar de passar por meio de objeto!!!
@@ -582,50 +630,56 @@ Se o meu r1 = new retangulo(4, 7) estava retornando um objeto com altura de 4 e 
 Se eu passar calcularArea() ou atribuir um var areaTotal = r1.area, vai dar NaN (not a number) nos dois casos.
 
 
-=======================================
+
 # Ternary Operator (Operador Ternário)
-=======================================
+
 Avalia  uma  expressão  condicionalmente,  baseado  em  uma  expressão  de decisão. Tem  o  mesmo  comportamento  do comando if/else,  mas  trata-se  de  uma expressão, não um comando.
 
 Um exemplo:
 
+```
 function maior(a, b) {
   return a > b ? a : b;
 }
+```
 
 Ou seja, se a gente digitar maior(5, 4) no console, ele vai retornar 5. Isso acontece, pq a gente lê o return da seguinte forma. 5 (a) é maior que 4 (b) ?, se sim, me retorna "a" (que no caso, foi 5), se não (o se não, é os ":"), me retorna b. Ele iria me retornar b, caso eu entrasse com um número menor no que o b no a. Exemplo: maior(2, 4). Iria me retornar o 4.
 
 
 
-=============================
+
 # Funções map, filter e find
-=============================
+
 A função map transforma os elementos de um array com base em uma função de transformação recebida, devolvendo um novo array ao final do processo. Um exemplo:
 
+```
 // Transforma array de objetos para array de strings 
 let names = usaPresidents.map((item) => item.name);
-
+```
 
 Já a função filter, filtra um array com base em uma função que é avaliada para cada elemento. Caso a função retorne true, o elemento é mantido, caso contrário o elemento é filtrado. Um novo array é devolvido ao final do processo. Exemplo:
 
+```
 // Obtém apenas presidentes do partido republicano 
 let republicans = usaPresidents.filter((item) => item.party == "Republican");
-
+```
 
 Por fim, temos o find, a função  find  procura  o  primeiro  elemento  do  array  para  o  qual  a  função fornecida  retorna  true.  O  elemento  encontrado  é  devolvido  como  resultado,  ou  null caso não encontre. Exemplo:
 
+```
 // Encontra primeiro presidente do partido democrata 
 let firstDemocratic = usaPresidents.find((item) => item.party == "Democratic");
+```
 
 
 
-====================
 # Template Literal
-====================
+
 Template  string  (ou  template  literal)  oferece  uma  sintaxe  conveniente  para  montar uma string intercalada com variáveis, evitando uma sequência de operações de  concatenação.  Tais  templates  são  delimitados  pelo  caractere  crase  e  podem  interpolar expressões com a sintaxe ${}. Outra diferença com relação a strings literais é que elas podem conter quebras de linha.
 
 Exemplo:
 
+```
 let a = 2, b = 3; 
 let soma = a + b; 
 
@@ -634,5 +688,6 @@ console.log(`${a} + ${b} = ${soma}`);
 
 // Equivale a 
 console.log(a + " + " + b + " = " + soma);
+```
 
 Como é possível notar, é uma forma de concatenar as nossas variáveis com texto.
