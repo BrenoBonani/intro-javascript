@@ -174,7 +174,7 @@ que seja executado dentro das chaves}.
 Depois que criarmos a function, não a necessidade de colocar a palavra-chave de novo. Então basta usar getMilk(); que o sistema
 vai buscar onde está a função e executa-la. Outro elemento importante é o console.log("inserir um valor"); que registra uma string dentro do console.
 
-Logo, ao executar um código com console.log("");, os valores dentro da string serão armazenados no console e aparecerão no console. A principal diferença entre o console.log e o alert, é que o ALERT o usuário consegue ver, qualquer visitante consegue ver o alert.
+Logo, ao executar um código com console.log("");, os valores dentro da string serão exibidos no console. A principal diferença entre o console.log e o alert, é que o ALERT o usuário consegue ver, qualquer visitante consegue ver o alert. Vai aparecer para ele.
 
 Mas no caso dos logs, apenas aparecem para o console e para o desenvolvedor. Muito usado para depurar o código ou ver se acha algum bug e imprimir parte do código no console. Mas voltando as funções. As funções são ótimas para deixar o código mais seco e evitar repetições desnecessárias. Tornando ele mais curto. 
 
@@ -187,11 +187,13 @@ function getMilk(bottles) {
 }
 
 getMilk(2);
+```
 
-Ou seja, o IDE vai procurar dentro da função "getMilk", que vai calcular o custo de 2 garrafas, que no caso, será de 3.
+Ou seja, a função chamada getMilk(2) vai procurar dentro da função "getMilk", que vai calcular o custo de 2 garrafas, que no caso, será de 3.
 
 Um exemplo de como modificar dentro das funções, é esse:
 
+```
 function getMilk(money) {   
   console.log("leaveHouse");
   console.log("moveRight");
